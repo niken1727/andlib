@@ -10,16 +10,13 @@ import java.util.ArrayList;
  */
 public class IntentParams {
     private Context context;
-    ArrayList<IntentData> arrayList;
 
-    public IntentParams(Context context, ArrayList<IntentData> arrayList) {
+    public IntentParams(Context context) {
         this.context = context;
-        this.arrayList = arrayList;
     }
 
     public void intentData(){
-        Intent intent = new Intent(context, arrayList.get(0).intentClass);
-        intent.putExtra("url", arrayList.get(0).url);
+        Intent intent = new Intent(context, WebViewActivity.class);
         context.startActivity(intent);
     }
 

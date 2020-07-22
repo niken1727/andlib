@@ -36,7 +36,7 @@ public class WebViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(WebViewActivity.this));
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        loadUrl();
+//        loadUrl();
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
