@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -15,11 +18,13 @@ public class WebViewActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<TransactionPairData> arrayList;
     TransactionDetailAdapter adapter;
+    Button login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
         recyclerView = findViewById(R.id.recycler_view);
+        login = findViewById(R.id.bt_login);
         arrayList = new ArrayList<>();
         arrayList.add(new TransactionPairData("Reference", "HC-8918"));
         arrayList.add(new TransactionPairData("Merchant", "PrabhuPAY Store"));
@@ -32,6 +37,13 @@ public class WebViewActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         loadUrl();
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(WebViewActivity.this, OtpActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void loadUrl() {
