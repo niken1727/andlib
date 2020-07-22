@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#C31B22</color>
+    <color name="pp_primary">#C31B22</color>
     <color name="colorPrimaryDark">#C31B22</color>
     <color name="colorAccent">#C31B22</color>
     <color name="white">#FFFFFF</color>
