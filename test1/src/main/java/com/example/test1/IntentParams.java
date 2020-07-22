@@ -10,19 +10,17 @@ import java.util.ArrayList;
  */
 public class IntentParams {
     private Context context;
-    ArrayList<String> arrayList;
+    ArrayList<IntentData> arrayList;
 
-    public IntentParams(Context context, ArrayList<String> arrayList) {
+    public IntentParams(Context context, ArrayList<IntentData> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }
 
     public void intentData(){
-        Intent intent = context.getPackageManager().getLaunchIntentForPackage(arrayList.get(0));
-        intent.putExtra("operatorCode", arrayList.get(1));
-        intent.putExtra("firstLabel", arrayList.get(2));
-        intent.putExtra("firstValue", arrayList.get(3));
-        intent.putExtra("activity", arrayList.get(4));
+        Intent intent = new Intent(context, arrayList.get(0).intentClass);
+        intent.putExtra("url", arrayList.get(0).url);
         context.startActivity(intent);
     }
+
 }
