@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".WebViewActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PrabhuPAY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <WebView
+        android:visibility="gone"
         android:id="@+id/web_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

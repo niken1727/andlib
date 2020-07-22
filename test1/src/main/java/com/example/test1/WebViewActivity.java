@@ -23,5 +23,6 @@ public class WebViewActivity extends AppCompatActivity {
         if(url != null){
             webView.loadUrl(url);
         }
+
     }
 }
