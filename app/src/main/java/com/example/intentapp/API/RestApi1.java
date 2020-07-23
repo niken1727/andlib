@@ -12,13 +12,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by Niken on 7/22/2020.
  */
-public class RestApi {
+public class RestApi1 {
     Context context;
     ApiServices apiServices;
     private static OkHttpClient client;
     private static Retrofit retrofit;
 
-    public RestApi(Context context) {
+    public RestApi1(Context context) {
         this.context = context;
     }
 
@@ -43,4 +43,7 @@ public class RestApi {
         return client;
     }
 
+    public ApiServices getApiServices() {
+        return apiServices;
+    }
 }

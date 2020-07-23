@@ -5,5 +5,6 @@ package com.example.intentapp.API;
  */
 public class ApiUrl {
     public final static String BaseUrl = "https://testsys.prabhupay.com/api/";
-    public final static String Initiate = "";
+    public final static String Initiate = "EPayment/Initiate";
+    public final static String getList = "AppVersion/GetList";
 }
